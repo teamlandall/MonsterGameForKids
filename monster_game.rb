@@ -13,7 +13,7 @@ class Monster
 	end
 
 	#introduction and request a name for the monster
-	def say(&block)
+	def say
 		print "What do you want to call your monster? "
 		@name = gets.chomp
 		print "#{name} says... "
@@ -66,7 +66,7 @@ class Monster
 	end
 
 	#asks the user how many times they'd like the monster to scream. 
-	def scream(&block)
+	def scream
 		print "Good choice. How many times should #{@name} scream? "
 		number = gets.chomp.to_i
 		number.times { print "\n AAAGGGHHHHHH!! \n\n" }
@@ -75,7 +75,7 @@ class Monster
 	end
 
 	#Uses random numbers between 3 and 10 to start a slow countdown, ending with a "Boo!"
-	def scare(&block)
+	def scare
 		print "#{@name} is a great scarer. But you never know when it is coming...\n"
 		i = rand(10)
 		j = rand(3)
@@ -89,7 +89,7 @@ class Monster
 	end
 
 	#Chase option. Sort of boring.
-	def chase(&block)
+	def chase
 		print "#{@name} is super fast. Up on your feet and start running! \n"
 		print "Uh oh. Here comes #{@name}! Run faster! \n"
 		puts "\n Go! \n Go! \n Go! \n Go! \n Go! \n"
@@ -98,7 +98,7 @@ class Monster
 	end
 
 	#hide option. Not much exciting here either. 
-	def hide(&block)
+	def hide
 		print "\n #{@name} loves to play hide and seek. He's a good hider."
 		print "\n Close your eyes, count to 10 and then go find him."
 		for i in 1..10 do
